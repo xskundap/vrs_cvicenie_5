@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "gpio.h"
+#include "assignment.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -100,7 +101,17 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    if(switch_state)
+	   {
+		  GPIOA->BSRR |= GPIO_BSRR_BS_4;
+		  for(uint16_t i=0; i<0xFF00; i++){}
+		  GPIOA->BRR |= GPIO_BRR_BR_4;
+		  for(uint16_t i=0; i<0xFF00; i++){}
+	   }
+	   else
+	   {
+		  GPIOA->BRR |= GPIO_BRR_BR_4;
+	   }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
