@@ -99,7 +99,6 @@ void Error_Handler(void);
 #define		BUTTON_EXTI_SAMPLES_WINDOW		30
 #define		BUTTON_EXTI_SAMPLES_REQUIRED	20
 
-
 /**
  *  Function checks if the button was pressed or EXTI detection was false - positive.
  *  @input_param_1 - PORT: GPIO port connected to button.
