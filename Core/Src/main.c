@@ -167,7 +167,7 @@ uint8_t checkButtonState(GPIO_TypeDef* PORT, uint8_t PIN, uint8_t edge, uint8_t 
 
 		while(button_state < samples_required && timeout < samples_window)
 		{
-			if((LL_GPIO_IsInputPinSet(Tlacidlo_GPIO_Port, Tlacidlo_Pin) && (edge) )/*LL_GPIO_IsInputPinSet(PORT, PIN)*/)
+			if((LL_GPIO_IsInputPinSet(Tlacidlo_GPIO_Port, Tlacidlo_Pin) && (edge) ))
 			{
 				button_state += 1;
 			}
